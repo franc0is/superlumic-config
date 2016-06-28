@@ -13,67 +13,67 @@
     - name: install cask applications
       homebrew_cask: name={{item}} state=present
       with_items:
-	- 1password
-	- alfred
-	- dash
+        - 1password
+        - alfred
+        - dash
         - dropbox
-	- flux
-	- firefox
-	- gimp
+        - flux
+        - firefox
+        - gimp
         - google-chrome
-	- gpgtools
+        - gpgtools
         - istat-menus
-	- java
-	- nvalt
-	- rescuetime
-	- skype
+        - java
+        - nvalt
+        - rescuetime
+        - skype
         - spotify
-	- steam
-	- vlc
-	- yubico-authenticator
+        - steam
+        - vlc
+        - yubico-authenticator
 
     - name: install brew applications
       homebrew: name={{item}} state=latest
       with_items:
-	- autoconf
-	- automake
-	- bash
-	- bash-completion
-	- bcrypt
-	- binutils
-	- cscope
-	- ctags
-	- curl
-	- docker
-	- docker-compose
-	- docker-machine
-	- doxygen
-	- gcc
-	- git
-	- git-ewxtras
-	- gnupg21
-	- grep
-	- ncdu
-	- neovim
-	- node
-	- mosh
-	- openssh
-	- openssl
-	- pypy
-	- python
-	- readline
-	- reattach-to-user-namespace
-	- ruby
-	- tmux
-	- transmission
-	- tree
-	- valgrind
-	- vim
-	- wget
-	- xhvyve
-	- yubikey-personalization
-	- zlib
-	- z
+        - autoconf
+        - automake
+        - bash
+        - bash-completion
+        - bcrypt
+        - binutils
+        - cscope
+        - ctags
+        - curl
+        - docker
+        - docker-compose
+        - docker-machine
+        - doxygen
+        - gcc
+        - git
+        - git-ewxtras
+        - gnupg21
+        - grep
+        - ncdu
+        - neovim
+        - node
+        - mosh
+        - openssh
+        - openssl
+        - pypy
+        - python
+        - readline
+        - reattach-to-user-namespace
+        - ruby
+        - tmux
+        - transmission
+        - tree
+        - valgrind
+        - vim
+        - wget
+        - xhvyve
+        - yubikey-personalization
+        - zlib
+        - z
 
   vars:
     - computername: francois-mbp
