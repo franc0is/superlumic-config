@@ -5,6 +5,7 @@
 
   roles:
     - osxdefaults
+    - roderik.superlumic-homebrew
 
   tasks:
     - name: install cask applications
@@ -20,6 +21,7 @@
         - google-chrome
         - gpgtools
         - istat-menus
+        - iterm2
         - java
         - nvalt
         - rescuetime
@@ -27,7 +29,6 @@
         - spotify
         - steam
         - vlc
-        - yubico-authenticator
 
     - name: install brew applications
       homebrew: name={{item}} state=latest
@@ -60,6 +61,7 @@
         - python
         - readline
         - reattach-to-user-namespace
+        - rbenv
         - ruby
         - tmux
         - transmission
@@ -73,6 +75,6 @@
         - z
 
   vars:
-    - computername: francois-mbp
+    - computername: talos
     - git_user_name: François Baldassari
     - git_user_email: baldassarifr@gmail.com
