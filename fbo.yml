@@ -1,0 +1,79 @@
+---
+
+- hosts: 127.0.0.1
+  connection: local
+
+  roles:
+    - osxdefaults
+    - roderik.superlumic-homebrew
+
+  tasks:
+    - name: install cask applications
+      homebrew_cask: name={{item}} state=present
+      with_items:
+        - 1password
+        - alfred
+        - dash
+        - dropbox
+        - flux
+        - firefox
+        - gimp
+        - google-chrome
+        - gpgtools
+        - istat-menus
+        - iterm2
+        - java
+        - nvalt
+        - rescuetime
+        - skype
+        - spotify
+        - steam
+        - vlc
+
+    - name: install brew applications
+      homebrew: name={{item}} state=latest
+      with_items:
+        - autoconf
+        - automake
+        - bash
+        - bash-completion
+        - bcrypt
+        - binutils
+        - cscope
+        - ctags
+        - curl
+        - docker
+        - docker-compose
+        - docker-machine
+        - doxygen
+        - gcc
+        - git
+        - git-ewxtras
+        - gnupg21
+        - grep
+        - ncdu
+        - neovim
+        - node
+        - mosh
+        - openssh
+        - openssl
+        - pypy
+        - python
+        - readline
+        - reattach-to-user-namespace
+        - rbenv
+        - ruby
+        - tmux
+        - transmission
+        - tree
+        - valgrind
+        - vim
+        - wget
+        - xhvyve
+        - yubikey-personalization
+        - zlib
+        - z
+
+  vars:
+    - git_user_name: François Baldassari
+    - git_user_email: baldassarifr@gmail.com
